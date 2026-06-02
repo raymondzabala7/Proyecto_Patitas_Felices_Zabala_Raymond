@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contacto</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav class="menu">
+<h1>Patitas Felices</h1>
+<ul>
+<li><a href="/index.html">Inicio</a></li>
+<li><a href="adopt.html">Adopta</a></li>
+<li><a href="contact.html">Contacto</a></li>
+<li><a href="meet_us.html">Conocenos</a></li>
+</ul>
+</nav>
+
+<section class="contacto">
+
+<h2>Contactanos</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre" required>
+<input type="text" placeholder="Apellidos" required>
+<input type="text" placeholder="Ciudad" required>
+<input type="email" placeholder="Correo" required>
+<input type="tel" placeholder="Teléfono">
+
+<div class="form-group">
+  <label for="tipo-consulta">Tipo de consulta o envío</label>
+  <select id="tipo-consulta" name="tipo_consulta" required>
+    <option value="" disabled selected>Selecciona una opción</option>
+    <option value="adopcion">Adopcion</option>
+    <option value="donacion">Donacion</option>
+    <option value="voluntariado">Voluntariado</option>
+    <option value="informacion">Informacion general</option>
+    <option value="otro">Otro</option>
+  </select>
+</div>
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button>Enviar</button>
+
+</form>
+<div class="donation-container">
+  <div class="donation-header">
+      <h2>Apoya nuestra causa</h2>
+      <p>Tu contribución hace una gran diferencia. ¡Dona hoy!</p>
+  </div>
+  
+  <form action="#" method="POST">
+
+      <div class="custom-amount">
+          <label for="amount">Monto deseado para donar ($):</label>
+          <input type="number" id="amount" name="amount" placeholder="Ej. 50" min="1">
+      </div>
+
+      <div class="donor-details">
+          <div class="form-group">
+              <label for="name">Nombre completo</label>
+              <input type="text" id="name" name="name" required placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+          </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Donar ahora</button>
+  </form>
+</div>
+
+<script>
+  function setAmount(value) {
+      const buttons = document.querySelectorAll('.amount-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById('amount').value = value;
+  }
+</script>
+
+<footer class="site-footer">
+<div class="footer-left">
+  <p class="footer-title">Patitas Felices</p>
+  <p>Patitas Felices © 2026</p>
+
+</div>
+<div class="footer-right">
+<p>patitasfelicescol@gmail.com</p>
+<p>https://app.raymondz.net/login</p>
+</div>
+</footer>
+</section>
+<footer class="site-footer">
+
+</footer>
+</body>
+</html>
+
+
